@@ -5,7 +5,7 @@
 [ext_resource path="res://Jump.gd" type="Script" id=3]
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 243.625, 76.25 )
+extents = Vector2( 512, 76.25 )
 
 [sub_resource type="CapsuleShape2D" id=4]
 radius = 70.0
@@ -16,12 +16,17 @@ height = 0.0
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2( 539.375, 520 )
+position = Vector2( 513, 520 )
 shape = SubResource( 3 )
 
 [node name="Ground" type="Sprite" parent="StaticBody2D/CollisionShape2D"]
-position = Vector2( 6.10352e-05, 1.99994 )
-scale = Vector2( 9.74, 6.26 )
+position = Vector2( 258, 2 )
+scale = Vector2( 10.43, 6.26 )
+texture = ExtResource( 2 )
+
+[node name="Ground2" type="Sprite" parent="StaticBody2D/CollisionShape2D"]
+position = Vector2( -257.875, 2 )
+scale = Vector2( 10.245, 6.26 )
 texture = ExtResource( 2 )
 
 [node name="KinematicBody2D" type="KinematicBody2D" parent="."]
