@@ -35,6 +35,11 @@ position = Vector2( -257.875, 2 )
 scale = Vector2( 10.245, 6.26 )
 texture = ExtResource( 2 )
 
+[node name="Ground3" type="Sprite" parent="StaticBody2D/CollisionShape2D"]
+position = Vector2( -257.875, 2 )
+scale = Vector2( 10.245, 6.26 )
+texture = ExtResource( 2 )
+
 [node name="KinematicBody2D" type="KinematicBody2D" parent="."]
 position = Vector2( 20, 2 )
 script = ExtResource( 3 )
