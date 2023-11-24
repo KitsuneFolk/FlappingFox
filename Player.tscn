@@ -15,8 +15,8 @@ height = 0.0
 [node name="StaticBody2D" type="Node2D"]
 
 [node name="Background" type="Sprite" parent="."]
-position = Vector2( 511, 126.5 )
-scale = Vector2( 0.978516, 0.78418 )
+position = Vector2( 512, 126.5 )
+scale = Vector2( 0.998047, 0.78418 )
 texture = ExtResource( 4 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
@@ -36,7 +36,7 @@ scale = Vector2( 10.245, 6.26 )
 texture = ExtResource( 2 )
 
 [node name="Ground3" type="Sprite" parent="StaticBody2D/CollisionShape2D"]
-position = Vector2( -257.875, 2 )
+position = Vector2( 774, 1.99994 )
 scale = Vector2( 10.245, 6.26 )
 texture = ExtResource( 2 )
 
