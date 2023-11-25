@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://fox.png" type="Texture" id=1]
 [ext_resource path="res://ground.png" type="Texture" id=2]
 [ext_resource path="res://Jump.gd" type="Script" id=3]
 [ext_resource path="res://background.png" type="Texture" id=4]
+[ext_resource path="res://GroundMovement.gd" type="Script" id=5]
 
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 512, 76.25 )
@@ -24,15 +25,16 @@ texture = ExtResource( 4 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 513, 520 )
 shape = SubResource( 3 )
+script = ExtResource( 5 )
 
-[node name="Ground" type="Sprite" parent="StaticBody2D/CollisionShape2D"]
-position = Vector2( 258, 2 )
-scale = Vector2( 10.43, 6.26 )
+[node name="Ground1" type="Sprite" parent="StaticBody2D/CollisionShape2D"]
+position = Vector2( -257.875, 2 )
+scale = Vector2( 10.245, 6.26 )
 texture = ExtResource( 2 )
 
 [node name="Ground2" type="Sprite" parent="StaticBody2D/CollisionShape2D"]
-position = Vector2( -257.875, 2 )
-scale = Vector2( 10.245, 6.26 )
+position = Vector2( 258, 2 )
+scale = Vector2( 10.43, 6.26 )
 texture = ExtResource( 2 )
 
 [node name="Ground3" type="Sprite" parent="StaticBody2D/CollisionShape2D"]
