@@ -13,6 +13,11 @@ config_version=4
 config/name="FlappingFox"
 run/main_scene="res://Player.tscn"
 
+[display]
+
+window/size/width=772
+window/size/resizable=false
+
 [editor]
 
 version_control_autoload_on_startup=true

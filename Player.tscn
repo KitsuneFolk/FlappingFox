@@ -7,81 +7,83 @@
 [ext_resource path="res://GroundMovement.gd" type="Script" id=6]
 
 [sub_resource type="RectangleShape2D" id=5]
-extents = Vector2( 24.8712, 10.8631 )
+extents = Vector2( 38.4523, 11.1838 )
 
 [sub_resource type="CapsuleShape2D" id=4]
 radius = 70.0
 height = 0.0
 
 [node name="StaticBody2D" type="Node2D"]
+position = Vector2( -1, 275 )
 
 [node name="Background" type="Sprite" parent="."]
-position = Vector2( 512, 126.5 )
-scale = Vector2( 0.998047, 0.78418 )
+position = Vector2( 387, 24.4999 )
+scale = Vector2( 0.753906, 0.584961 )
 texture = ExtResource( 4 )
 
 [node name="Node2D" type="Node2D" parent="."]
+position = Vector2( 2, -267 )
 script = ExtResource( 6 )
 
 [node name="Ground1" type="StaticBody2D" parent="Node2D"]
 scale = Vector2( 1.00124, 1.01337 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Ground1"]
-position = Vector2( 511.865, 513.804 )
-scale = Vector2( 20.5706, 6.42 )
+position = Vector2( 385.522, 549.651 )
+scale = Vector2( 10, 3 )
 shape = SubResource( 5 )
 
 [node name="Sprite" type="Sprite" parent="Node2D/Ground1/CollisionShape2D"]
-position = Vector2( -0.0466937, 0.0501553 )
-scale = Vector2( 0.99623, 0.873063 )
+position = Vector2( -0.0974878, -0.00695768 )
+scale = Vector2( 1.54218, 0.89526 )
 texture = ExtResource( 2 )
 
 [node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="Node2D/Ground1/CollisionShape2D"]
-position = Vector2( 0.0242777, 0.0501556 )
-scale = Vector2( 2.49058, 1.09133 )
+position = Vector2( -0.0975837, -0.0155931 )
+scale = Vector2( 3.85545, 1.11994 )
 
 [node name="Ground2" type="StaticBody2D" parent="Node2D"]
-position = Vector2( 1027, 0 )
+position = Vector2( 773, 0 )
 scale = Vector2( 1.00124, 1.01337 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Ground2"]
-position = Vector2( 510.617, 513.804 )
-scale = Vector2( 20.5706, 6.42 )
+position = Vector2( 385.012, 549.651 )
+scale = Vector2( 10, 3 )
 shape = SubResource( 5 )
 
 [node name="Sprite" type="Sprite" parent="Node2D/Ground2/CollisionShape2D"]
-position = Vector2( -0.0467013, 0.0501553 )
-scale = Vector2( 0.99623, 0.873063 )
+position = Vector2( -0.148795, -0.000236198 )
+scale = Vector2( 1.54409, 0.894888 )
 texture = ExtResource( 2 )
 
 [node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="Node2D/Ground2/CollisionShape2D"]
-position = Vector2( -0.0546279, 0.0501536 )
-scale = Vector2( 2.49137, 1.09133 )
+position = Vector2( -0.123821, 0 )
+scale = Vector2( 3.85772, 1.11838 )
 
 [node name="Ground3" type="StaticBody2D" parent="Node2D"]
-position = Vector2( 2053, 0 )
+position = Vector2( 1546, 0 )
 scale = Vector2( 1.00124, 1.01337 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Ground3"]
-position = Vector2( 510.617, 513.804 )
-scale = Vector2( 20.5706, 6.42 )
+position = Vector2( 385.012, 549.651 )
+scale = Vector2( 10, 3 )
 shape = SubResource( 5 )
 
 [node name="Sprite" type="Sprite" parent="Node2D/Ground3/CollisionShape2D"]
-position = Vector2( -0.054625, 0.0501553 )
-scale = Vector2( 0.99623, 0.873063 )
+position = Vector2( -0.183273, -0.000236511 )
+scale = Vector2( 1.54409, 0.894888 )
 texture = ExtResource( 2 )
 
 [node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="Node2D/Ground3/CollisionShape2D"]
-position = Vector2( -0.0466947, 0.0501557 )
-scale = Vector2( 2.49058, 1.09133 )
+position = Vector2( -0.198753, -8.34465e-07 )
+scale = Vector2( 3.86021, 1.11838 )
 
 [node name="PlayerKinematicBody2D" type="KinematicBody2D" parent="."]
 position = Vector2( 20, 2 )
 script = ExtResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerKinematicBody2D"]
-position = Vector2( 132, 372 )
+position = Vector2( 73, 183 )
 shape = SubResource( 4 )
 
 [node name="Fox" type="Sprite" parent="PlayerKinematicBody2D/CollisionShape2D"]
