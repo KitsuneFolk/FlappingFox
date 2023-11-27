@@ -1,6 +1,6 @@
 extends Node2D
 
-const GROUND_SCALE = 10
+const GROUND_SCALE = 15
 const SPEED = 300
 onready var ground1: StaticBody2D = get_node("/root/StaticBody2D/Node2D/Ground1")
 onready var ground2: StaticBody2D = get_node("/root/StaticBody2D/Node2D/Ground2")
