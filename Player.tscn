@@ -21,6 +21,17 @@ position = Vector2( 387, 24.4999 )
 scale = Vector2( 0.753906, 0.584961 )
 texture = ExtResource( 4 )
 
+[node name="Label" type="Label" parent="Background"]
+margin_left = -460.0
+margin_top = -485.0
+margin_right = -220.0
+margin_bottom = -462.0
+rect_scale = Vector2( 3, 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0.792157, 0.792157, 0.792157, 1 )
+text = "distance:"
+uppercase = true
+
 [node name="Node2D" type="Node2D" parent="."]
 position = Vector2( 2, -267 )
 script = ExtResource( 6 )
