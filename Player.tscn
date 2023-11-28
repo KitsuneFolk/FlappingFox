@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://fox.png" type="Texture" id=1]
 [ext_resource path="res://ground.png" type="Texture" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://background.png" type="Texture" id=4]
 [ext_resource path="res://Wolf.png" type="Texture" id=5]
 [ext_resource path="res://GroundMovement.gd" type="Script" id=6]
+[ext_resource path="res://EnemyTouch.gd" type="Script" id=7]
 
 [sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 38.4523, 11.1838 )
@@ -102,6 +103,7 @@ shape = SubResource( 6 )
 
 [node name="Sprite" type="Sprite" parent="Node2D/Area2D/CollisionShape2D"]
 texture = ExtResource( 5 )
+script = ExtResource( 7 )
 
 [node name="PlayerKinematicBody2D" type="KinematicBody2D" parent="."]
 position = Vector2( 20, 2 )
@@ -118,3 +120,4 @@ texture = ExtResource( 1 )
 [connection signal="screen_exited" from="Node2D/Ground1/CollisionShape2D/VisibilityNotifier2D" to="Node2D" method="_on_VisibilityNotifier2D_screen_exited" binds= [ 1 ]]
 [connection signal="screen_exited" from="Node2D/Ground2/CollisionShape2D/VisibilityNotifier2D" to="Node2D" method="_on_VisibilityNotifier2D_screen_exited" binds= [ 2 ]]
 [connection signal="screen_exited" from="Node2D/Ground3/CollisionShape2D/VisibilityNotifier2D" to="Node2D" method="_on_VisibilityNotifier2D_screen_exited" binds= [ 3 ]]
+[connection signal="body_entered" from="Node2D/Area2D" to="Node2D/Area2D/CollisionShape2D/Sprite" method="_on_Area2D_body_entered"]
