@@ -2,6 +2,7 @@ extends Node2D
 
 const GROUND_SCALE = 15
 const SPEED = 300
+onready var distance_label: Label = get_node("/root/StaticBody2D/Background/Label")
 onready var ground1: StaticBody2D = get_node("/root/StaticBody2D/Node2D/Ground1")
 onready var ground2: StaticBody2D = get_node("/root/StaticBody2D/Node2D/Ground2")
 onready var ground3: StaticBody2D = get_node("/root/StaticBody2D/Node2D/Ground3")
@@ -29,6 +30,7 @@ func moveGround(id: int):
 
 func _process(delta):
 	position.x -= SPEED * delta
+	distance_label.text = "DISTANCE: %s" % abs((position.x / 200) as int)
 	pass
 
 func _on_VisibilityNotifier2D_screen_exited(id: int):
