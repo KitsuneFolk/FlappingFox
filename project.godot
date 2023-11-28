@@ -11,7 +11,7 @@ config_version=4
 [application]
 
 config/name="FlappingFox"
-run/main_scene="res://Player.tscn"
+run/main_scene="res://Menu.tscn"
 
 [display]
 
