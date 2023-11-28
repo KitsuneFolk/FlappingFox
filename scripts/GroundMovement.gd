@@ -40,10 +40,8 @@ func _process(delta):
 
 func _on_VisibilityNotifier2D_screen_exited(id: int):
 	moveGround(id)
-	pass
 
 func summonEnemy(x: int):
 	var new_enemy = $Area2D.duplicate()
 	new_enemy.position.x = x
 	add_child(new_enemy)
-	print("Summoned, x = ", x, "current pos = ", position.x)
