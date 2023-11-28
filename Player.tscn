@@ -1,13 +1,17 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://fox.png" type="Texture" id=1]
 [ext_resource path="res://ground.png" type="Texture" id=2]
 [ext_resource path="res://Jump.gd" type="Script" id=3]
 [ext_resource path="res://background.png" type="Texture" id=4]
+[ext_resource path="res://Wolf.png" type="Texture" id=5]
 [ext_resource path="res://GroundMovement.gd" type="Script" id=6]
 
 [sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 38.4523, 11.1838 )
+
+[sub_resource type="CircleShape2D" id=6]
+radius = 46.0
 
 [sub_resource type="CapsuleShape2D" id=4]
 radius = 70.0
@@ -88,6 +92,16 @@ texture = ExtResource( 2 )
 [node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="Node2D/Ground3/CollisionShape2D"]
 position = Vector2( -0.198753, -8.34465e-07 )
 scale = Vector2( 3.86021, 1.11838 )
+
+[node name="Area2D" type="Area2D" parent="Node2D"]
+position = Vector2( -214, 264 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Area2D"]
+position = Vector2( 1062, 217 )
+shape = SubResource( 6 )
+
+[node name="Sprite" type="Sprite" parent="Node2D/Area2D/CollisionShape2D"]
+texture = ExtResource( 5 )
 
 [node name="PlayerKinematicBody2D" type="KinematicBody2D" parent="."]
 position = Vector2( 20, 2 )
