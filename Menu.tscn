@@ -13,8 +13,18 @@ script = ExtResource( 1 )
 anchor_right = 15.507
 anchor_bottom = 6.593
 margin_left = 210.0
-margin_top = 222.0
+margin_top = 120.0
 margin_right = -320.28
-margin_bottom = 1.27997
+margin_bottom = -100.72
 rect_scale = Vector2( 4, 4 )
 text = "New Game"
+
+[node name="ExitButton" type="Button" parent="."]
+anchor_right = 15.507
+anchor_bottom = 6.593
+margin_left = 210.0
+margin_top = 338.0
+margin_right = -320.28
+margin_bottom = 117.28
+rect_scale = Vector2( 4, 4 )
+text = "Exit"
